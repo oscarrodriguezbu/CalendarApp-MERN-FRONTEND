@@ -1,0 +1,131 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.calendar-screen {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.rbc-calendar {
+    height: 100%;
+}
+
+.evento  {
+    display: flex;
+    flex-direction: column;
+}
+
+.evento strong {
+    font-size: 0.9rem;
+}
+
+.evento span {
+    font-size: 0.8rem;
+}
+
+/* --------------------------------------------MODAL----------------------------------------------------------------------------------- */
+/* Modal */
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    border: none;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: white;
+    border-radius: 5px;
+    color: rgb(51, 51, 51);
+    display: inline;
+    max-height: 620px;
+    max-width: 500px;
+    outline: none;
+    padding: 10px;
+}
+
+/* 
+Cuando estén en la parte de los estilos del botón .fab
+
+Si tienen problemas para clickear el botón en pantallas chicas basta con añadir al final de los estilos: 
+.fab { ...estilos; z-index: 10; }
+*/
+
+
+/* Datepicker */
+.react-datetime-picker input:focus {
+    outline: none;
+}
+
+/* Datepicker */
+.react-datetime-picker__wrapper {
+    border: 0px solid gray !important;
+}
+
+
+/* --------------------------------------------boton flotante----------------------------------------------------------------------------------- */
+
+.botones-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 1rem;
+    background-color: #343a40;
+    /* min-height: 124.22px; */
+    max-height: 80px;
+}
+.fab{
+    border-radius: 100%;
+    /* position: fixed;
+    bottom: 30px;
+    right: 25px; */
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.fab-danger{
+    
+   /*  position: fixed; */
+   /*  bottom: 30px;
+    left: 25px; */
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 3.5rem;
+    /* z-index: 10; */
+}
+
+
+/* --------------------------------------------CARGANDO EN RUTAS----------------------------------------------------------------------------------- */
+
+.cargando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
